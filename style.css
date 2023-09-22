@@ -1,0 +1,461 @@
+:root {
+    --nav-bg-color: #5b01c3;
+    --container-bg-color: #6e16d1;
+    --primary-color: #6e16d1;
+    --car-color: #761CFA;
+    --card-color: #d4c4c4;
+    --light-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Header */
+
+.container-top {
+    height: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--container-bg-color);
+    color: var(--light-color);
+    padding-top: 10px;
+    animation: aparecer 300ms forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-top .logo {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 50px;
+    border: 1px solid var(--light-color);
+    border-radius: 50%;
+    background: var(--light-color);
+}
+
+.container-top h1 {
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.header-top {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Nav*/
+.nav-screen {
+    background-color: var(--nav-bg-color);
+    border-radius: 50px;
+    margin-top: 5px;
+    animation: aparecer 300ms forwards;
+}
+
+.nav-screen ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 30px 0px;
+}
+
+.nav-screen ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 20px 40px;
+    min-width: 50px;
+    border-radius: 50px;
+}
+
+.nav-screen ul li a:hover {
+    background-color: var(--card-color);
+    color: var(--primary-color);
+}
+
+.show-nav-top {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    border-radius: 0;
+    margin-top: 0;
+}
+
+/* NAV TOP MOBILE*/
+.nav-mobile {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: var(--nav-bg-color);
+    animation: aparecer 300ms forwards;
+}
+
+.nav-mobile div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.nav-mobile h2 {
+    color: var(--light-color);
+    padding-right: 0px;
+}
+
+.nav-mobile .img-car {
+    width: 80px;
+}
+
+.nav-mobile .agregados {
+    color: var(--light-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    margin-left: 40px;
+}
+
+/* NAV MOBILE*/
+.nav-mob-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    left: -50vw;
+    background-color: var(--nav-bg-color);
+    transition: all ease-in-out 300ms;
+}
+
+.nav-mob-left ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    list-style-type: none;
+    padding: 30px 0px;
+}
+
+.nav-mob-left ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    min-width: 50px;
+    border-radius: 50px;
+}
+
+.nav-mob-left ul li a:hover {
+    background-color: var(--card-color);
+    color: var(--primary-color);
+}
+
+.selected {
+    background-color: var(--card-color);
+    color: var(--primary-color) !important;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.btn-nav {
+    margin: 10px;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    border-color: 1px solid var(--card-color);
+}
+
+.show {
+    left: 0;
+}
+
+#cerrar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*End Nav*/
+
+@media(max-width: 768px){
+
+    .container-top {
+        display: none;
+    }
+
+    .nav-screen {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+/*End Header*/
+
+/*Products*/
+
+.products-section {
+    background-color: var(--container-bg-color);
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 66vw;
+}
+
+.products-section h1 {
+    color: var(--light-color);
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.products-section-alt {
+    margin-top: 96px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-color);
+    width: 280px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: #ff5733;
+    box-shadow: 0px 0px 30px #ff5733;
+}
+
+.card:focus {
+    border-color: #ff5733;
+    box-shadow: 0px 0px 30px #ff5733;
+}
+
+.card img {
+    width: 90%;
+    height: 70%;
+    margin-top: 10px;
+}
+
+.card h3, p, a {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.card a {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card a:hover {
+    background-color: var(--card-color);
+    color: var(--primary-color);
+}
+
+@media(max-width: 768px){
+    .products-section {
+        margin-top: 50px;
+        width: 100vw;
+    }
+}
+
+/*End Products*/
+
+/*Car*/
+
+.car-content {
+    background-color: var(--car-color);
+    color: var(--light-color);
+    width: 28vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 170px;
+    left: 70%;
+    overflow-y: scroll;
+}
+
+.car-empty {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-static .car-content {
+    position: fixed;
+    top: 96px;
+}
+
+.car-products h2 {
+    margin-top: 10px;
+}
+
+.car-products h3 {
+    margin-top: 10px;
+}
+
+.car-products table {
+    margin-top: 20px;
+    text-align: center;
+    width: 20vw;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.car-products table tbody .t-left {
+    text-align: left;
+}
+
+.thp {
+    text-align: left;
+    padding-right: 5px;
+}
+
+.tho {
+    padding-left: 5px;
+}
+
+.tbody tr td {
+    padding-top: 10px;
+}
+
+.car-table {
+    font-size: 10px;
+    width: 300px;
+}
+
+.tbody td button {
+    width: 20px;
+    border-radius: 50px;
+    background: none;
+    color: var(--light-color);
+    border: none;
+    margin: 5px;
+}
+
+.tbody td button:hover {
+    border: 1px solid var(--light-color);
+}
+
+.tbody .btn-more {
+    padding-top: 2px;
+}
+
+.tbody .btn-less {
+    padding: 1px;
+}
+
+.btn-car {
+    margin-top: 15px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: var(--card-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-car:hover {
+    background: none;
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.content {
+    display: flex;
+}
+
+/* car modal */
+.bg-modal {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+
+.show-modal {
+    display: flex;
+    opacity: 1;
+}
+
+@media(max-width: 768px){
+
+    .car {
+        display: none;
+    }
+
+    .show-car {
+        display: flex;
+    }
+
+    .car-content {
+        height: 260px;
+        width: 80vw;
+        top: 20vh;
+        left: 10vw;
+    }
+
+    .car-content .car-products table {
+        width: 70vw;
+    }
+    
+}

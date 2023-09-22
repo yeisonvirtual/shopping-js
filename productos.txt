@@ -1,0 +1,33 @@
+{
+    "content": [{
+        "key": "1",
+        "src": "./media/camiseta.jpg",
+        "nombre": "Camisa",
+        "precio": "20"
+    },
+    {
+        "key": "2",
+        "src": "./media/avion-juguete.jpg",
+        "nombre": "Avion",
+        "precio": "20"
+    },
+    {
+        "key": "3",
+        "src": "./media/camion-juguete.jpg",
+        "nombre": "Camion",
+        "precio": "20"
+    },
+    {
+        "key": "4",
+        "src": "./media/destornillador.jpg",
+        "nombre": "Destornillado",
+        "precio": "20"
+    },
+    {
+        "key": "5",
+        "src": "./media/taladro.jpg",
+        "nombre": "Taladro",
+        "precio": "20"
+    }]
+
+}
